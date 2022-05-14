@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const name = process.env.NAME || 'Skatater';
+const name = process.env.NAME || 'Stakater';
 
 app.get('/', (req,res) =>{
 
