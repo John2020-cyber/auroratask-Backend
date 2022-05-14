@@ -25,4 +25,4 @@ spec:
             - containerPort: 80 
           env:
             - name: NAME
-              value: "Zain"
+              value: "Zain Siddiqui"
