@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: backend-pod
+    labels:
+      name: backend
+      env: aurtask
+spec:
+   containers:
+    - name: backend
+      image: crazyfordevops/backend
+      ports:
+        - containerPort: 80
+      env:
+        - name: NAME
+          value: "Zain"

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: backend-deploy
+    labels:
+      name: backend-deploy
+      env: aurtask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: backend
+      env: aurtask
+  template:
+    metadata:
+      name: backend-pod
+      labels:
+        name: backend
+        env: aurtask
+    spec:
+      containers:
+        - name: backend
+          image: crazyfordevops/backend
+          ports:
+            - containerPort: 80 
+          env:
+            - name: NAME
+              value: "Zain"
