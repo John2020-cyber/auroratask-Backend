@@ -19,6 +19,7 @@ If you want to pass your 'NAME' in environment variable
 ```
 NAME=*YOURNAME* node backend.js
 ```
+**OPTIONAL**
 If you want to pass your 'PORT' in environment variable
 ```
 PORT=*PORT NUMBER* node backend.js
