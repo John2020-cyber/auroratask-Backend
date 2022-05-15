@@ -6,7 +6,7 @@ Backend API is written in `Nodejs` using `Express` framework. The code sends "He
 ### How to run it.
 Make sure you are running it on a Linux machine. Make sure you have installed `node 16 or above` and `npm` on your linux machine. I'll be working on Ubuntu, my commands will work on it. `git clone` the backend into your machine.
 ```
-cd aurotask-BACKEND
+cd auroratask-BACKEND
 npm init --yes
 npm i express
 npm i nodemon (optional good for testing environment so you don't have to stop and start on change in code)
