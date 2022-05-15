@@ -82,6 +82,7 @@ Get the URL to access the deployment by the following:
 ```
 minikube service backend --url
 ```
+You can input the `*YOUR MINIKUBE IP*:30080` in browser or you can `curl http:\\*YOUR MINIKUBE IP*:30080`
 
 
-##                                                         **THE BACKEND END**
+##                                                         ***THE BACKEND END***
