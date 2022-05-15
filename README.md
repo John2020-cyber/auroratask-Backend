@@ -1,6 +1,6 @@
 # Backend Code Explaination
 ## Running code on local *nix machine
-Backend API is written in Nodejs using Express framework. The code sends "Hello Stakater" by default if no environment variable `NAME` is set. The code works on port 8080 be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8080` displays the backend output
+Backend API is written in Nodejs using Express framework. The code sends "Hello Stakater" by default if no environment variable `NAME` is set. The code works on port `8080` be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8080` displays the backend output
 
 ### How to run it.
 Make sure you are running it on a Linux machine. Make sure you have installed `node 16 or above` and `npm` on your linux machine. I'll be working on Ubuntu, my commands will work on it. `git clone` the backend into your machine.
@@ -70,7 +70,7 @@ cd kuberenetes
 ```
 We have to run `Two` items in total for docker deployment. `backend-service.yaml` and `backend-deploy.yaml`. The backend service is Nodeport and exposes external ip of 30080 to the ip extracted from minikube. To deploy backend and service do following:
 ```
-kubectl create -f backend-server.yaml
+kubectl create -f backend-service.yaml
 kubectl create -f backend-deploy.yaml
 ```
 To check the status of service and deployment do the following:
