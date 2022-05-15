@@ -1,5 +1,6 @@
 # Backend Code Explaination
 ## Running code on local *nix machine
+Ideally `pm2` should be used for `nodejs` deployments but I am using `node` for running `nodejs` as it is test environment.
 Backend API is written in `Nodejs` using `Express` framework. The code sends "Hello Stakater" by default if no environment variable `NAME` is set. The code works on port `8080` be default and if given environment variable `PORT`, it will use that port number. It is uses localhost as ip address. `http://localhost:8080` displays the backend output
 
 ### How to run it.
