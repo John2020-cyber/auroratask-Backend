@@ -64,5 +64,24 @@ minikube config set driver virtualbox
 minikube start --driver=virtualbox
 minikube status
 ```
+My docker images have been uploaded on the `Dockerhub`. The name of backend image is `crazyfordevops/backend-vFinal`, the deployment will pull the images directly. To work for kubernetes use the directory:
+```
+cd kuberenetes
+```
+We have to run `Two` items in total for docker deployment. `backend-service.yaml` and `backend-deploy.yaml`. The backend service is Nodeport and exposes external ip of 30080 to the ip extracted from minikube. To deploy backend and service do following:
+```
+kubectl create -f backend-server.yaml
+kubectl create -f backend-deploy.yaml
+```
+To check the status of service and deployment do the following:
+```
+kubectl get svc,deployment
+```
+The `READY` option should show `1/1` since we are using only `1` replica it will create only `1 POD`.
+Get the URL to access the deployment by the following:
+```
+minikube service backend --url
+```
 
-# adding new commmit
+
+##                                                         **THE BACKEND END**
