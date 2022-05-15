@@ -8,9 +8,9 @@ metadata:
 spec:
    containers:
     - name: backend
-      image: crazyfordevops/backend
+      image: crazyfordevops/backend:vFinal
       ports:
-        - containerPort: 80
+        - containerPort: 8080
       env:
         - name: NAME
           value: "Zain"
