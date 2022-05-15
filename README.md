@@ -15,12 +15,18 @@ node backend.js
  OR
 nodemon backend.js
 ```
-If you want to pass your name in environment variable
+If you want to pass your 'NAME' in environment variable
 ```
 NAME=*YOURNAME* node backend.js
-
 ```
-
+If you want to pass your 'PORT' in environment variable
+```
+PORT=*PORT NUMBER* node backend.js
+```
+You will get following output and you can access your 
+```
+Listening on port 8080..
+```
 
 ## Running on Docker image
 
