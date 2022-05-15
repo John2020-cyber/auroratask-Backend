@@ -20,14 +20,14 @@ If you want to pass your 'NAME' in environment variable
 ```
 NAME=*YOURNAME* node backend.js
 ```
+You will get following output and you can access your api with browser `localhost:8080` or `curl http://localhost:8080`
+```
+Listening on port 8080..
+```
 **OPTIONAL**
 If you want to pass your 'PORT' in environment variable
 ```
 PORT=*PORT NUMBER* node backend.js
-```
-You will get following output and you can access your api with browser `localhost:8080` or `curl http://localhost:8080`
-```
-Listening on port 8080..
 ```
 
 ## Running on Docker image
