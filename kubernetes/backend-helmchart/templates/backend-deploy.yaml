@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: {{ .Release.Name }}-deploy
+    labels:
+      name: backend-deploy
+      env: aurtask
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: backend
+      env: aurtask
+  template:
+    metadata:
+      name: backend-pod
+      labels:
+        name: backend
+        env: aurtask
+    spec:
+      containers:
+        - name: backend
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 8080 
+          env:
+            - name: NAME
+              value: "Zain Siddiqui"

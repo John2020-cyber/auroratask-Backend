@@ -1,0 +1,6 @@
+#Default Values for backend-helmcaht.
+
+replicaCouunt: 1
+image:
+    repository: crazyfordevops/backend
+    tag: "vFinal"
