@@ -42,11 +42,28 @@ To run `backend` docker images we have to expose internal port to external port 
 ```
 sudo docker run -e *yourname* -p 8080:8080 --name backend backend
 ```
-You can access the container now by running entering `localhost:8080` in browser or `curl http://localhost:8080` on your terminal. If no name is given. The response of backend will be:
+You can access the container now by running entering `localhost:8080` in browser or `curl http://localhost:8080` on your terminal. If no `NAME` variable is given. The response of backend will be:
 ```
 Hello Stakater
 ```
 ## Running on Kubernetes with MINIKUBE
-
+Make sure your have installed `kubectl` to use kubernetes with `MINIKUBE`. Make sure you have configured and `MINIKUBE` is running in your virtual enviroment. You can use the following link to install `kubectl` `https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/` and to install `MINIKUBE` `https://minikube.sigs.k8s.io/docs/start/`.
+If you are running ubuntu you can use my steps to install. Make sure you have installed `Virtual Box` on your ubuntu machine.
+```
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+kubectl --version
+kubectl version
+kubectl cluster-info
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube config set driver virtualbox
+minikube start --driver=virtualbox
+minikube status
+```
 
 # adding new commmit
