@@ -85,6 +85,7 @@ Get the URL to access the deployment by the following:
 minikube service backend --url
 ```
 You can input the `*YOUR MINIKUBE IP*:30080` in browser or you can `curl http:\\*YOUR MINIKUBE IP*:30080`
-
+## Helm Chat for Backend
+It resides in the directory kubernetes/backend-helmchart. It's not completed, I couldn't run it in my environment. It has some issues suggested that needs resolving.
 
 ##                                                         ***THE BACKEND END***
